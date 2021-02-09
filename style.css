@@ -1,0 +1,100 @@
+/* hide and reveal */
+:target ~ [href="#"] + section,
+section {
+  display: none;
+}
+:target + section,
+section:target,
+[href="#"] + section {
+  display: block;
+}
+
+/* layout */
+body {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-auto-columns: max-content;
+  grid-auto-flow: row;
+}
+body > a {
+  grid-row-end: 2;
+  height: var(--margin-height);
+  position: sticky;
+  top: 0;
+}
+[href="#"] {
+  grid-column-start: 1;
+}
+section {
+  grid-column: 1/100;
+}
+section[id] {
+  padding-top: calc(var(--header-height) + 1em);
+}
+
+/* fill empty menu links with id */
+body > a:empty::after {
+  content: attr(id);
+}
+section a:empty::after {
+  content: attr(href);
+}
+
+/* look */
+* {
+  --bg: #eee;
+  --fg: #222;
+  --af: #16a;
+  --header-height: 5em;
+  box-sizing: border-box;
+}
+body {
+  font-size: calc(1vmin + 0.5vmax);
+  background: var(--bg);
+  color: var(--fg);
+  font-weight: 300;
+  min-height: 100vh;
+  overflow-y: scroll;
+  max-width: min(65ch, 100vw);
+  margin: auto;
+}
+body > a {
+  color: var(--fg);
+  background: var(--bg);
+  border-bottom: 2pt solid var(--bg);
+  font-family: sans-serif;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 0.5em;
+  padding-top: 3em;
+}
+body>a:target/*, [href=#]*/ {
+  border-color: var(--fg);
+}
+section {
+  font-family: serif;
+  padding: 1em;
+}
+section a {
+  color: var(--af);
+}
+code {
+  font-size: 80%;
+}
+h1 {
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+li {
+  margin-bottom: 1em;
+}

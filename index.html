@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<a id="differences" href="#differences"></a>
+<section>
+  <h1>How it differs from John Doe</h1>
+  <h2>Break the <code>nav</code></h2>
+  <p>
+    Links to the sub-pages are kept adjacent to their sections, so there is less
+    no need to jump around the file when adding sections. This breaks
+    accessibility quite much, since they are no longer grouped under
+    <code>nav</code> tag and are scattered across the whole document.
+  </p>
+  <p>Good luck navigating here on Lynx.</p>
+  <h2>Home in the end</h2>
+  <p>
+    Home page section is moved at the end (This won't help with accessibility
+    either). This way it can be hidden with
+    <code>:target~[href=#]:section</code>, eliminating the need to position
+    sections absolutely, since it was used there to cover the home page.
+  </p>
+</section>
+
+<a id="goals" href="#goals"></a>
+<section>
+  <h1>What was important</h1>
+  <ul>
+    <li>
+      Keep links adjacent to their sections so adding (removing) section could
+      be as easy as:
+      <pre><code>&lt;a href="#section-id"&gt;section title&lt;/a&gt;
+&lt;section id="section-id"&gt;
+...
+&lt;/section&gt;</code></pre>
+    </li>
+    <li>
+      Make top-level links addressing themselves so instances of the same id are
+      kept close together and spread across as little elements as possible.<br />
+      (Ideally one instance per id, but two in single element is not too bad).
+    </li>
+    <li>
+      Positioning them at the top of the grid helps with scroll offset
+      (exception: <a href="#hidden-section">sections w/o top-level link</a>).
+    </li>
+    <li>
+      Also make section title optional when ID is good enough. So it simplifies
+      fruther to:
+      <pre><code>&lt;a id="section-id" href="#section-id"&gt;&lt;/a&gt;&lt;section&gt;
+...
+&lt;/section&gt;</code></pre>
+    </li>
+    <li>
+      Keep the stylesheet minimal &mdash; don't obscure how it works with other
+      styles.
+    </li>
+  </ul>
+</section>
+
+<a id="non-goals" href="#non-goals"></a>
+<section>
+  <h1>I won't:</h1>
+  <ul>
+    <li>
+      fix accessibility issues (like using <code>nav</code>, or moving home to
+      the top);
+    </li>
+    <li>
+      fix the problem with <code>padding-top</code> in
+      <a href="#hidden-section">hidden sections</a>;
+    </li>
+    <li>add other section types (like <code>.lightbox</code> in John Doe);</li>
+    <li>
+      make it pretty or ready to use (I don't think its a good idea to use it).
+    </li>
+  </ul>
+</section>
+
+<!-- hidden -->
+
+<section id="hidden-section">
+  <h1>You can scroll up, beyond the header, but I don't care</h1>
+  <p>
+    Similique non ad labore rerum laboriosam. Et ullam et illo sed voluptate
+    explicabo blanditiis. Dolor delectus ut perferendis est quisquam placeat
+    reiciendis. Itaque cumque est deserunt officiis at quaerat vero. Dolorem
+    explicabo omnis commodi cupiditate aut tempore aut. Voluptatem corrupti
+    voluptas voluptas. Et id laudantium alias quia hic similique minima velit.
+  </p>
+  <p>
+    Velit deserunt ullam consectetur qui dignissimos. Quis magni hic et sequi
+    aut dolor. Exercitationem tenetur est dolorem. Ea consectetur veniam est et
+    ipsum. Possimus est repellat quo eum repellendus voluptatum. Explicabo qui
+    architecto aut. Non excepturi perspiciatis dolor. Doloribus saepe rem
+    eveniet enim iusto porro aut.
+  </p>
+  <p>
+    Officiis quasi optio rerum inventore. Occaecati expedita autem nobis beatae
+    odit commodi. Quis adipisci voluptatem nisi optio commodi alias minima ad.
+    Sequi rem modi doloremque commodi. Similique non ad labore rerum laboriosam.
+    Et ullam et illo sed voluptate explicabo blanditiis. Dolor delectus ut
+    perferendis est quisquam placeat reiciendis.
+  </p>
+  <p>
+    Itaque cumque est deserunt officiis at quaerat vero. Dolorem explicabo omnis
+    commodi cupiditate aut tempore aut. Voluptatem corrupti voluptas voluptas.
+    Et id laudantium alias quia hic similique minima velit. Velit deserunt ullam
+    consectetur qui dignissimos. Quis magni hic et sequi aut dolor.
+    Exercitationem tenetur est dolorem. Ea consectetur veniam est et ipsum.
+    Possimus est repellat quo eum repellendus voluptatum.
+  </p>
+  <p>
+    Explicabo qui architecto aut. Non excepturi perspiciatis dolor. Doloribus
+    saepe rem eveniet enim iusto porro aut. Officiis quasi optio rerum
+    inventore. Occaecati expedita autem nobis beatae odit commodi. Quis adipisci
+    voluptatem nisi optio commodi alias minima ad. Sequi rem modi doloremque
+    commodi.
+  </p>
+  <p>
+    Similique non ad labore rerum laboriosam. Et ullam et illo sed voluptate
+    explicabo blanditiis. Dolor delectus ut perferendis est quisquam placeat
+    reiciendis. Itaque cumque est deserunt officiis at quaerat vero. Dolorem
+    explicabo omnis commodi cupiditate aut tempore aut. Voluptatem corrupti
+    voluptas voluptas. Et id laudantium alias quia hic similique minima velit.
+  </p>
+  <p>
+    Velit deserunt ullam consectetur qui dignissimos. Quis magni hic et sequi
+    aut dolor. Exercitationem tenetur est dolorem. Ea consectetur veniam est et
+    ipsum. Possimus est repellat quo eum repellendus voluptatum. Explicabo qui
+    architecto aut. Non excepturi perspiciatis dolor. Doloribus saepe rem
+    eveniet enim iusto porro aut.
+  </p>
+  <p>
+    Officiis quasi optio rerum inventore. Occaecati expedita autem nobis beatae
+    odit commodi. Quis adipisci voluptatem nisi optio commodi alias minima ad.
+    Sequi rem modi doloremque commodi. Similique non ad labore rerum laboriosam.
+    Et ullam et illo sed voluptate explicabo blanditiis. Dolor delectus ut
+    perferendis est quisquam placeat reiciendis.
+  </p>
+  <p>
+    Itaque cumque est deserunt officiis at quaerat vero. Dolorem explicabo omnis
+    commodi cupiditate aut tempore aut. Voluptatem corrupti voluptas voluptas.
+    Et id laudantium alias quia hic similique minima velit. Velit deserunt ullam
+    consectetur qui dignissimos. Quis magni hic et sequi aut dolor.
+    Exercitationem tenetur est dolorem. Ea consectetur veniam est et ipsum.
+    Possimus est repellat quo eum repellendus voluptatum.
+  </p>
+  <p>
+    Explicabo qui architecto aut. Non excepturi perspiciatis dolor. Doloribus
+    saepe rem eveniet enim iusto porro aut. Officiis quasi optio rerum
+    inventore. Occaecati expedita autem nobis beatae odit commodi. Quis adipisci
+    voluptatem nisi optio commodi alias minima ad. Sequi rem modi doloremque
+    commodi.
+  </p>
+</section>
+
+<!-- home page -->
+
+<a id="home" href="#">JanKowalski</a>
+<section>
+  <h1>Single-page website in html+css</h1>
+  <p>
+    This project was inspired by the
+    <a href="https://github.com/cadars/john-doe">John Doe</a> (by
+    <a href="https://github.com/cadars">@cadars</a>). It's a single-page
+    website, with multiple "sub-pages" achieved using only html and css.
+  </p>
+  <p>
+    Design was modified in a few ways, breaking some things and simplifying
+    others (check out <a href="#differences"></a>). I've done it as a fun
+    exercise and I don't intend to polish it in any way (maybe if it simplifies
+    it further). I also don't encourage using it or any patterns/concepts
+    included.
+  </p>
+  <p>
+    If you find it interesting as I do fill free to
+    <a href="https://github.cmo/kajetanjasztal/JanKowalski">play with it</a> in
+    any way you like. And will gladly
+    <a href="https://github.com/kajetanjasztal/JanKowalski/PR"
+      >see your changes</a
+    >
+    if you make some.
+  </p>
+</section>
+<link rel="stylesheet" href="style.css" />
