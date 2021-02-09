@@ -20,4 +20,4 @@ patterns/concepts included to the real world use-cases.
 
 ## Preview
 
-[check out](https://kajetanjasztal.github.com/JanKowalski)
+[check out](https://kajetanjasztal.github.io/JanKowalski)
