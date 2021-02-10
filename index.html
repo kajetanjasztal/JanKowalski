@@ -5,8 +5,8 @@
   <h1>How it differs from John Doe</h1>
   <h2>Break the <code>nav</code></h2>
   <p>
-    Links to the sub-pages are kept adjacent to their sections, so there is less
-    no need to jump around the file when adding sections. This breaks
+    Links to the sub-pages are kept adjacent to their sections, so there is no
+    need to jump around the file when adding new sections. This breaks
     accessibility quite much, since they are no longer grouped under
     <code>nav</code> tag and are scattered across the whole document.
   </p>
@@ -47,6 +47,10 @@
       <pre><code>&lt;a id="section-id" href="#section-id"&gt;&lt;/a&gt;&lt;section&gt;
 ...
 &lt;/section&gt;</code></pre>
+    </li>
+    <li>
+      Simplify hiding and revealing styles (especially get rid of absolute
+      positioning) as much as possible.
     </li>
     <li>
       Keep the stylesheet minimal &mdash; don't obscure how it works with other
