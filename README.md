@@ -14,7 +14,7 @@ _(maybe if it simplifies it further)_.
 
 ## Usage
 
-If you find it interesting as I do fill free to play with it in any way you
+If you find it interesting as I do feel free to play with it in any way you
 like, but because of lack of accessibility I don't encourage applying it or any
 patterns/concepts included to the real world use-cases.
 
