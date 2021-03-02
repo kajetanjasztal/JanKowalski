@@ -30,8 +30,11 @@ body > a {
 section {
   grid-column: 1/100;
 }
-section[id] {
-  padding-top: calc(var(--header-height) + 1em);
+
+section:target:before {
+  display: block;
+  height: var(--header-height);
+  content: " ";
 }
 
 /* fill empty menu links with id */
